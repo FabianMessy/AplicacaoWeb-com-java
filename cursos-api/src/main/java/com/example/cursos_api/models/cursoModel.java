@@ -23,7 +23,8 @@ public class cursoModel{
 
     private Integer cargaHoraria;
 
-    
+    public cursoModel(){}
+
     public cursoModel(
         String nome, 
         String categoria, 
@@ -34,5 +35,17 @@ public class cursoModel{
         this.cargaHoraria = cargaHoraria;
     }
 
-    public long getId() {return id;}
+    public Long getId() {return id;}
+    public void setId(Long id){this.id=id;}
+
+    public String getNome(){return nome;}
+    public void setNome(String nome){this.nome=nome;}
+
+    public String getCategoria(){return categoria;}
+    public void setCategoria(String categoria) {
+        this.categoria=categoria;
+    }
+
+    public Integer getCargaHoraria(){return cargaHoraria;}
+    public void setCargaHoraria(Integer cargaHoraria){this.cargaHoraria=cargaHoraria;}
 }
