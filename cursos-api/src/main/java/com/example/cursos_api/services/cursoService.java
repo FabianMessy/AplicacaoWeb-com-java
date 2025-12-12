@@ -41,11 +41,11 @@ public class cursoService {
         }
         return Optional.empty();
     }
-
-    public boolean deletar(Long id){
-        //o ! troca o boolean para o inverso
-        if (!repository.existsById(id)) return false;
-        repository.deleteById(id);
+    public boolean deletar(Long id) {
+        Optional<cursoModel> curso = repository.findById(id);
+        if (curso.isEmpty()) return false;
+        repository.delete(curso.get());
         return true;
     }
+
 }
